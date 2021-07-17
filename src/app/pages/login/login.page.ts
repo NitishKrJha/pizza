@@ -33,8 +33,9 @@ export class LoginPage extends BaseComponent implements OnInit  {
     super(injector);
     this.initBaseComponent();
     this.loginForm = formBuilder.group({
-      username: ['', Validators.compose([Validators.required])],
-      password: ['', Validators.compose([Validators.required])]
+      email: ['', Validators.compose([Validators.required])],
+      password: ['', Validators.compose([Validators.required])],
+      device_type:'android'
     });
   }
 
@@ -50,27 +51,33 @@ export class LoginPage extends BaseComponent implements OnInit  {
   }
 
   register() {
-    this.navCtrl.navigateRoot('/register');
+    //this.navCtrl.navigateRoot('signup');
+    this.navCtrl.navigateRoot('signup');
   }
 
   onClickForgotPassword() {
   }
 
   handleApiResponse(data) {
+    
     this.loading.dismiss();
     if (data.resultType === con.login) {
-		  console.log(data.result);
+      console.log(data.result.user);
+      this.base.shared.Lstorage.setData('access_token',data.result.user.access_token);
+      this.base.shared.Lstorage.setData('uerId',data.result.user.user_id);
+      this.navCtrl.navigateRoot('pizza-list');
+		  /*console.log(data.result);
       const successMessage = data.result && data.result.message ? data.result.message : 'something went wrong';
       this.base.shared.Lstorage.setData('isLogged', 1);
-      this.base.shared.Lstorage.setData('email', data.result.data.email);
-      this.base.shared.Lstorage.setData('uerId', data.result.data.id);
+     // this.base.shared.Lstorage.setData('email', data.result.data.email);
+      //this.base.shared.Lstorage.setData('uerId', data.result.data.id);
       this.events.publish('userLogged', data.result.data);
       const navigationExtras: NavigationExtras = {
 				queryParams: {
 					uerId : data.result.data.staff_id
 				}
 			};
-			this.router.navigate(['/home'], navigationExtras);
+			this.router.navigate(['pizza-list'], navigationExtras);*/
     }
   }
 
@@ -78,7 +85,7 @@ export class LoginPage extends BaseComponent implements OnInit  {
     console.log('data', data);
     this.loading.dismiss();
     if (data.resultType === con.login) {
-      const errorMessage = data.result && data.result.message ? data.result.message : 'something went wrong';
+      const errorMessage = data.result && data.result.message ? data.result.message : 'User Name OR Password Not Match';
       this.base.shared.Alert.show_alert('Failed!', errorMessage);
     }
   }
@@ -92,11 +99,13 @@ export class LoginPage extends BaseComponent implements OnInit  {
     }
   }
   doRegister(){
-    const navigationExtras: NavigationExtras = {
+    console.log('ddddddddddddddddddddddddd');
+   /* const navigationExtras: NavigationExtras = {
       queryParams: {
       }
     };
-    this.router.navigate(['register'],navigationExtras);
+    this.router.navigate(['signup'],navigationExtras);*/
+     this.router.navigateByUrl('/signup') ;
   }
   fPassword(){
     const navigationExtras: NavigationExtras = {

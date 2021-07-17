@@ -1,6 +1,6 @@
 import { BaseApiService } from '../_classes/base-api.service';
 import { Injectable } from '@angular/core';
-import * as con from '../constant';
+import * as con from '../../_shared/constant';
 
 
 @Injectable()

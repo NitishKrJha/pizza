@@ -190,6 +190,7 @@ export class Shared {
   }
 
   responseCheck(data: any, key: any) {
+    console.log(data);
     let process = 0;
     if (data.bstatus === 1) {
       process = 1;

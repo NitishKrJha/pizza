@@ -71,7 +71,7 @@ export class AppComponent extends BaseComponent {
         console.log('show user id',data);
         if(data){
           console.log('ok',data);
-          this.userDetail(data);
+          //this.userDetail(data);
         }
       });
     });

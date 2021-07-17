@@ -55,6 +55,7 @@ export class BaseComponent implements OnDestroy {
     });
     this.apiSubscription = this.base.api.result.subscribe( (data) =>  {
       if (data.length !== 0) {
+        console.log('data',data.result.status.err_code);
         if (data.resultType === errorResult) {
           // If any issue produce due to network or unavailibility of host
           // const errorMessage = data.result.message ? data.result.message : 'something went wrong';
@@ -72,11 +73,11 @@ export class BaseComponent implements OnDestroy {
               return false;
             }
           }
-          if ((data.result !== undefined && data.result.status !== true)) {
+          if ((data.result !== undefined && data.result.status.err_code == '500' || data.result.status.err_code == '404')) {
             // If any internal issue or error occour at API which return blank or non JSON value
             console.log('Msg Code', data.result);
             // if ( data.result.msg_code === 'msg_1008') {
-            //   this.storage.clear();
+            //   this.storage.clear();0
             //   this.router.navigate(['/login']);
             // }
             this.handleApiResponseError(data);

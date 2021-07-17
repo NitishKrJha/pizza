@@ -1,7 +1,7 @@
 //export const API_URL  = 'http://localhost/shouvik/GrubBuddies/api/';
 //export const IMG_PATH  = 'http://localhost/shouvik/GrubBuddies/api/uploads/';
 export const IMG_PATH  = 'http://grubbud.readystaging.us/dev/uploads/';
-export const API_URL  ='http://grubbud.readystaging.us/dev/api/';
+export const API_URL  ='https://readystaging.us/doughit/api/';
 export const ORG_ID = '1';
 export const CONTACT_HIER_ID = '183';
 export const OS_TYPE = 'android';
