@@ -1,5 +1,7 @@
 {
   "name": "doughit",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

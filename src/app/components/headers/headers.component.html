@@ -1,0 +1,12 @@
+<ion-toolbar color="giftapp">
+  <ion-buttons slot="start" *ngIf="text !== 'home' && text !== 'login' && text !== 'otp_verify'">
+    <ion-back-button></ion-back-button>
+  </ion-buttons>
+  <ion-title>
+      <ion-text color="light">
+        <ion-text color="light" class="fw700">
+          <img class="parallax-obj parallax-down-obj" [ngClass]="(text !== 'home' && text !== 'login' && text !== 'otp_verify') ? 'headImage1' : 'headImage2'" src="{{iconUrl}}">
+        </ion-text>
+      </ion-text>
+  </ion-title>
+</ion-toolbar>

@@ -1,0 +1,111 @@
+.main-bg{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+}
+.img-fluid{
+    max-width: 100%;
+}
+.welcome{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #fff;
+    text-align: center;
+    h2{
+        font-size: 34px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    h4{ 
+        font-size: 20px;
+    }
+}
+.form-group{
+    position: relative;
+    margin-bottom: 10px;
+}
+.form-control{
+    border: 1px solid #E9E9E9;
+    border-radius: 9px;
+    height: 52px;
+    color: #535353;
+    background-color: #fff;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.25);
+    padding: 5px 10px !important;
+    padding-left: 44px !important;
+}
+.form-icon{
+    position: absolute;
+    top: 15px;
+    left: 14px;
+    z-index: 2;
+    font-size: 22px;
+}
+.btn-icon{
+    font-size: 26px;
+    margin-left: 72%;
+}
+.login-btn{
+    height: 52px;
+}
+.checkbox{
+    display: -webkit-box;      
+    display: -moz-box;        
+    display: -ms-flexbox;     
+    display: -webkit-flex; 
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    .label{
+        margin-left: 5px;
+        margin-top: -2px;
+    }
+}
+.forgot-pass{
+    font-size: 15px;
+    margin: 10px 0;
+    color: #7C91A8;
+    margin-top: 30px;
+    a{
+        color: #7C91A8;
+        text-decoration: none;
+        font-size: 15px;
+    }
+}
+.social{
+    ul{
+        display: -webkit-box;      
+        display: -moz-box;        
+        display: -ms-flexbox;     
+        display: -webkit-flex; 
+        display: flex;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        margin-top: 10px;
+        li{
+            list-style: none;
+            margin: 0 10px;
+        }
+    }
+}
+.dont-account{
+    color: #7C91A8;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 15px;
+    a{
+        font-size: 15px;
+        color: #FFBE00;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}

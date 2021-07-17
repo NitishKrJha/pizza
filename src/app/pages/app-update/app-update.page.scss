@@ -1,0 +1,25 @@
+:host{
+  .update-icon-wraper{
+    text-align: center;
+    padding: 16px 0px;
+    .update-icon-container{
+      padding: 16px;
+      display: inline-block;
+      border: #ccc 1px solid;
+      border-radius: 50%;
+    }
+    .update-icon{
+      color: #ccc;
+      font-size: 10rem;
+      margin: 0 auto;
+    }
+  }
+  .app-update-text {
+    padding: 16px;
+    font-size: .9rem;
+    color: #777;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+}

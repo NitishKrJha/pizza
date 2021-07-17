@@ -3,9 +3,36 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: '', 
+    redirectTo: '/tabs/tab3',
+    pathMatch: 'full' 
+  },
+  {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  }
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'signup',
+    loadChildren: () => import('./pages/signup/signup.module').then( m => m.SignupPageModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'pizza-list',
+    loadChildren: () => import('./pages/pizza-list/pizza-list.module').then( m => m.PizzaListPageModule)
+  },
+
+
+  
+
+  
+  
 ];
 @NgModule({
   imports: [

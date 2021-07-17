@@ -1,0 +1,22 @@
+<ion-content>
+	<div class="wrap-gallery-modal bg-dark">
+		
+		<div class="right-action">
+			<ion-button margin-bottom (click)="dismiss()" fill="clear" size="small" class="txt-light">
+				<ion-icon slot="icon-only" name="close"></ion-icon>
+			</ion-button>
+			<ion-button fill="clear" size="small" class="txt-light">
+				<ion-icon name="share"></ion-icon>
+			</ion-button>
+			<ion-button fill="clear" size="small" class="txt-light">
+				<ion-icon name="heart"></ion-icon>
+			</ion-button>
+			<ion-button fill="clear" size="small" class="txt-light">
+				<ion-icon name="sync"></ion-icon>
+			</ion-button>
+		</div>
+	
+		<img src="assets/images/{{data_gallery}}">
+
+	</div>
+</ion-content>

@@ -1,0 +1,42 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title color="medium">Modal Content</ion-title>
+    <ion-buttons slot="end" *ngIf="isModal==1">
+      <ion-button (click)="dismissModal()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-row class="ion-align-items-start">
+    <ion-col>
+      <div class="update-icon-wraper">
+        <span class="update-icon-container"><ion-icon name="cloud-download" class="update-icon"></ion-icon></span>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row class="ion-align-items-center">
+    <ion-col>
+      <div class="app-update-text">
+        A newer version of mjTrack app is available
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row class="ion-align-items-baseline">
+    <ion-col size="12">
+      <ion-button Expand="block" fill="outline" color="medium" (click)="openmarket()">
+        Update the App
+      </ion-button>
+    </ion-col>
+    <ion-col size="12" *ngIf="isModal==0">
+      <ion-button Expand="block" fill="outline" color="medium" routerLink="/">
+        Exit from App
+      </ion-button>
+    </ion-col>
+    <ion-col size="12" *ngIf="isModal==1" (click)="dismissModal()">
+      <ion-button Expand="block" fill="outline" color="medium" routerLink="/">
+        Remind Latter
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

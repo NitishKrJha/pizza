@@ -1,17 +1,184 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content>
+  <ion-card class="ion-no-margin no-radius">
+    <ion-card-content class="ion-no-padding">
+      <div class="story-scroll">
+        <ul>
+          <li>
+            <a href="#">
+              <img src="assets/images/avatar.jpg" alt="">
+            </a>
+            <div class="story-name">
+              <h6>Your Story</h6>
+            </div>
+            <div class="add-story">
+              <a href="#">
+                <ion-icon name="add-outline"></ion-icon>
+              </a>
+            </div>
+          </li>
+          <li>
+            <a href="#">
+              <img src="assets/images/avatar.jpg" alt="">
+            </a>
+            <div class="story-name">
+              <h6>Emma son Megen_eve</h6>
+            </div>
+          </li>
+          <li>
+            <a href="#">
+              <img src="assets/images/avatar.jpg" alt="">
+            </a>
+            <div class="story-name">
+              <h6>Emma son</h6>
+            </div>
+          </li>
+          <li>
+            <a href="#">
+              <img src="assets/images/avatar.jpg" alt="">
+            </a>
+            <div class="story-name">
+              <h6>Megen_eve</h6>
+            </div>
+          </li>
+          <li>
+            <a href="#">
+              <img src="assets/images/avatar.jpg" alt="">
+            </a>
+            <div class="story-name">
+              <h6>Emma son</h6>
+            </div>
+          </li>
+          <li>
+            <a href="#">
+              <img src="assets/images/avatar.jpg" alt="">
+            </a>
+            <div class="story-name">
+              <h6>Megen_eve</h6>
+            </div> 
+          </li>
+          <li>
+            <a href="#">
+              <img src="assets/images/avatar.jpg" alt="">
+            </a>
+            <div class="story-name">
+              <h6>Megen_eve</h6>
+            </div> 
+          </li>
+          <li>
+            <a href="#">
+              <img src="assets/images/avatar.jpg" alt="">
+            </a>
+            <div class="story-name">
+              <h6>Emma son</h6>
+            </div>
+          </li>
+          <li>
+            <a href="#">
+              <img src="assets/images/avatar.jpg" alt="">
+            </a>
+            <div class="story-name">
+              <h6>Megen_eve</h6>
+            </div> 
+          </li>
+        </ul>
+      </div>
+      <ion-grid class="ion-no-padding">
+        <ion-row>
+          <ion-col size="6">
+            <div class="grap-location">
+              <span>Grub Map</span> <img src="assets/images/location.png" alt="" width="32">
+            </div>
+          </ion-col>
+          <ion-col size="6">
+            <div class="grap-buddies">
+              <span>Grub Buddies</span> <img src="assets/images/group.png" alt="" width="40">
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" routerLink="/post-details">
+        <div class="user-avatar">
+          <ion-avatar>
+            <img src="assets/images/avatar.jpg" alt="">
+          </ion-avatar>
+          <div class="avatar-right">
+            <h4>Michael Bruno</h4>
+            <p><img src="assets/images/map-marker.png" alt="" width="14"> 1 km Away</p>
+          </div>
+        </div>
+        <div class="post-box">
+          <div class="post-img">
+            <img src="assets/images/post-img1.jpg" alt="" />
+            <div class="post-info">
+              <div class="user-age">
+                <p>Age: 22</p>
+                <p>Sex: Female</p>
+              </div>
+              <div class="user-action">
+                <a href="#">
+                  <span>DM</span> <img src="assets/images/chat-icon.png" alt="" width="15" />
+                </a>
+                <a href="#">
+                  <span>Block</span> <img src="assets/images/block-icon.png" alt="" width="15" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="post-text">
+            <p>I am in a mood of Wisky</p>
+            <a href="#">See More</a>
+          </div>
+        </div>
+      </ion-col>
+      <ion-col size="12" routerLink="/post-details">
+        <div class="user-avatar">
+          <ion-avatar>
+            <img src="assets/images/avatar.jpg" alt="">
+          </ion-avatar>
+          <div class="avatar-right">
+            <h4>Michael Bruno</h4>
+            <p><img src="assets/images/map-marker.png" alt="" width="14"> 1 km Away</p>
+          </div>
+        </div>
+        <div class="post-box">
+          <div class="post-img">
+            <img src="assets/images/post-img1.jpg" alt="" />
+            <div class="post-info">
+              <div class="user-age">
+                <p>Age: 22</p>
+                <p>Sex: Female</p>
+              </div>
+              <div class="user-action">
+                <a href="#">
+                  <span>DM</span> <img src="assets/images/chat-icon.png" alt="" width="15" />
+                </a>
+                <a href="#">
+                  <span>Block</span> <img src="assets/images/block-icon.png" alt="" width="15" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="post-text">
+            <p>I am in a mood of Wisky</p>
+            <a href="#">See More</a>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
 </ion-content>
+
