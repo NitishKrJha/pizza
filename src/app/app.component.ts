@@ -34,6 +34,7 @@ export class AppComponent extends BaseComponent {
   cartItemPrice: any;
   isLogged: any;
   userData: any = [];
+  access_token:any;
   public USER_IMG_PATH = con.IMG_PATH+"user/";
   pictureLink = "assets/images/avatar.jpg";
   picture: any ='';
@@ -109,6 +110,18 @@ export class AppComponent extends BaseComponent {
 
   goToaddress() {
     this.router.navigateByUrl('/address') ;
+  }
+  ngOnInit() {
+    this.base.shared.Lstorage.fetchData('access_token').then(datas => {
+      this.access_token=datas;
+      if(!this.access_token){
+        this.router.navigateByUrl('login') ;
+      }else{
+        this.router.navigateByUrl('pizza-list') ;
+      }
+
+      console.log(this.access_token);
+    });
   }
 
   goCart() {
