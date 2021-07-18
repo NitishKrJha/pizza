@@ -157,7 +157,7 @@ export class Shared {
       return this.loading;
     },
     dismiss_loader: async (loading) => {
-      console.log('loader', this.loadingCtrl);
+      console.log('loaderssssssssss', this.loadingCtrl);
       this.isLoading = false;
       return await this.loadingCtrl.dismiss();
     }

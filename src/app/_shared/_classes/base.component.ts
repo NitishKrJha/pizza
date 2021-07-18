@@ -81,12 +81,14 @@ export class BaseComponent implements OnDestroy {
             //   this.router.navigate(['/login']);
             // }
             this.handleApiResponseError(data);
+          }else if( data.result.status.err_code == '200'){
+            this.handleApiResponse(data);
           } else {
             // if ( data.result.msg_code === 'msg_1008') {
             //   this.storage.clear();
             //   this.router.navigate(['/login']);
             // }
-            this.handleApiResponse(data);
+            this.handleApiResponseError(data);
           }
         }
       }

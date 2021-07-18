@@ -231,6 +231,7 @@ export class BaseApiService {
   }
 
   public finalLogout(data: any) {
+    console.log('ddddddddddddddddddddddddddddaq');
     this.storage.clear();
     this.loading.dismiss();
     const navigationExtras: NavigationExtras = {

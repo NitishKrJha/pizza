@@ -70,7 +70,7 @@ export class SignupPage extends BaseComponent implements OnInit  {
     console.log('data', data);
     this.loading.dismiss();
     if (data.resultType === con.register) {
-      const errorMessage = data.result && data.result.message ? data.result.message : 'Something Went Wrong';
+      const errorMessage = data.result && data.result.status.message ? data.result.status.message : 'Something Went Wrong';
       this.base.shared.Alert.show_alert('Failed!', errorMessage);
     }
   }

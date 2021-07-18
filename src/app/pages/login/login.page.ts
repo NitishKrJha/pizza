@@ -40,6 +40,7 @@ export class LoginPage extends BaseComponent implements OnInit  {
   }
 
   ngOnInit() {
+   
 		this.base.shared.Lstorage.fetchData('isLogged').then(datas => {
         if(datas && (datas === 1)) {
           //this.navCtrl.navigateRoot('/home');

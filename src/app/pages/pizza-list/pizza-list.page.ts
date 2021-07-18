@@ -33,12 +33,11 @@ export class PizzaListPage extends BaseComponent implements OnInit {
   ngOnInit() {
   }
   logout(){
-   // console.log('dddddddddddd');
-  //  this.navCtrl.navigateRoot('login');
+   
     this.base.shared.Lstorage.delData('isLogged');
     this.base.shared.Lstorage.delData('access_token');
     this.base.shared.Lstorage.delData('uerId');
-    this.router.navigateByUrl('logout', { replaceUrl: true }) ;
+    this.router.navigateByUrl('logout') ;
   }
 
 }

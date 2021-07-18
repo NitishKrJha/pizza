@@ -16,7 +16,7 @@ export class LoadingService {
     return await this.loadingController.create({
       spinner: 'lines',
       message: 'Please wait...',
-      duration: 5000,
+      duration: 3000,
     }).then(a => {
       a.present().then(() => {
         console.log('presented');
