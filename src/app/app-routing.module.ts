@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'pizza-list',
     loadChildren: () => import('./pages/pizza-list/pizza-list.module').then( m => m.PizzaListPageModule)
   },
+  {
+    path: 'logout',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
 
 
   

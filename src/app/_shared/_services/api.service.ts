@@ -6,7 +6,7 @@ import * as con from '../../_shared/constant';
 @Injectable()
 export class ApiService extends BaseApiService {
 
-  public registerUrl = con.API_URL + 'register';
+  public registerUrl = con.API_URL + 'signup';
   public loginUrl = con.API_URL + 'login';
   public fpwdUrl = con.API_URL + 'fpassword';
   public myProfileUrl = con.API_URL + 'myprofile';

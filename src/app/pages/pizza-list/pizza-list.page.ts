@@ -2,7 +2,7 @@ import { Component, OnInit, Injector } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NavController, MenuController, ToastController, AlertController, LoadingController, Platform, Events } from '@ionic/angular';
 //import { NavigationExtras } from '@angular/router';
-//import { BaseComponent } from '../../_shared/_classes/base.component';
+import { BaseComponent } from '../../_shared/_classes/base.component';
 //import * as con from '../../_shared/constant';
 import { LoadingService } from '../../_shared/loading.service';
 
@@ -11,7 +11,7 @@ import { LoadingService } from '../../_shared/loading.service';
   templateUrl: './pizza-list.page.html',
   styleUrls: ['./pizza-list.page.scss'],
 })
-export class PizzaListPage implements OnInit {
+export class PizzaListPage extends BaseComponent implements OnInit {
 
   constructor(
     public navCtrl: NavController,
@@ -23,8 +23,10 @@ export class PizzaListPage implements OnInit {
     public toastCtrl: ToastController,
     private route: ActivatedRoute,
     public loading: LoadingService,
-    //injector: Injector
+    injector: Injector
   ) { 
+    super(injector);
+    this.initBaseComponent();
     
   }
 
@@ -32,7 +34,11 @@ export class PizzaListPage implements OnInit {
   }
   logout(){
    // console.log('dddddddddddd');
-    this.navCtrl.navigateRoot('login');
+  //  this.navCtrl.navigateRoot('login');
+    this.base.shared.Lstorage.delData('isLogged');
+    this.base.shared.Lstorage.delData('access_token');
+    this.base.shared.Lstorage.delData('uerId');
+    this.router.navigateByUrl('logout', { replaceUrl: true }) ;
   }
 
 }
