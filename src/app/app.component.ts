@@ -55,10 +55,10 @@ export class AppComponent extends BaseComponent {
   ) {
     super(injector);
     this.initializeApp();
-    this.events.subscribe('userLogged', (data) => {
+    /*this.events.subscribe('userLogged', (data) => {
       this.userData = data;
       this.picture = this.userData.picture;
-    });
+    });*/
   }
 
   initializeApp() {
@@ -98,13 +98,13 @@ export class AppComponent extends BaseComponent {
   }
 
   login() {
-    this.router.navigateByUrl('/login', { replaceUrl: true }) ;
+    this.router.navigateByUrl('login', { replaceUrl: true }) ;
   }
 
   logout() {
     this.base.shared.Lstorage.delData('isLogged');
     this.base.shared.Lstorage.delData('uerId');
-    this.router.navigateByUrl('/login', { replaceUrl: true }) ;
+    this.router.navigateByUrl('login', { replaceUrl: true }) ;
   }
 
   goToaddress() {

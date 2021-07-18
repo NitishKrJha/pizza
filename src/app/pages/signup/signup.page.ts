@@ -75,9 +75,21 @@ export class SignupPage extends BaseComponent implements OnInit  {
     }
   }
   doRegister(){
-    if (!this.registrationForm.valid) {
+    console.log(this.registrationForm.value.fname);
+    if(!this.registrationForm.value.fname){
+      this.base.shared.Alert.show_alert('Failed!', 'Please Enter Frist Name');
+    }else if(!this.registrationForm.value.lname){
+      this.base.shared.Alert.show_alert('Failed!', 'Please Enter Last Name'); 
+    }else if(!this.registrationForm.value.email){
+      this.base.shared.Alert.show_alert('Failed!', 'Please Enter Email Address'); 
+    }else if(!this.registrationForm.value.phone){
+      this.base.shared.Alert.show_alert('Failed!', 'Please Enter Mobile Number'); 
+    }else if(!this.registrationForm.value.password){
+      this.base.shared.Alert.show_alert('Failed!', 'Please Enter Password'); 
+    }
+    /*if (!this.registrationForm.valid) {
       this.base.shared.Alert.show_alert('Failed!', 'Please fill up register form properly');
-    } else {
+    }*/ else {
       this.loading.present();
       this.base.api.register(this.registrationForm.value);
     }

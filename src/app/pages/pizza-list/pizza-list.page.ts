@@ -12,7 +12,7 @@ import { LoadingService } from '../../_shared/loading.service';
   styleUrls: ['./pizza-list.page.scss'],
 })
 export class PizzaListPage extends BaseComponent implements OnInit {
-
+  access_token:any;
   constructor(
     public navCtrl: NavController,
     public loadingCtrl: LoadingController,
@@ -31,13 +31,21 @@ export class PizzaListPage extends BaseComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.base.shared.Lstorage.fetchData('access_token').then(datas => {
+      this.access_token=datas;
+      if(!this.access_token){
+        this.router.navigateByUrl('login') ;
+      }
+
+      console.log(this.access_token);
+    });
   }
   logout(){
-   
     this.base.shared.Lstorage.delData('isLogged');
     this.base.shared.Lstorage.delData('access_token');
     this.base.shared.Lstorage.delData('uerId');
-    this.router.navigateByUrl('logout') ;
+    this.navCtrl.navigateRoot('/login');
+   // this.router.navigateByUrl('/login', { replaceUrl: true }) ;;
   }
 
 }

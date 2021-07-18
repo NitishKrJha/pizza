@@ -17,6 +17,7 @@ export class LoginPage extends BaseComponent implements OnInit  {
   phoneNumber: any = '';
   tagHide: any = true;
   phone='';
+  access_token:any;
   constructor(
     public navCtrl: NavController,
     public loadingCtrl: LoadingController,
@@ -40,15 +41,20 @@ export class LoginPage extends BaseComponent implements OnInit  {
   }
 
   ngOnInit() {
-   
-		this.base.shared.Lstorage.fetchData('isLogged').then(datas => {
+    this.base.shared.Lstorage.fetchData('access_token').then(datas => {
+      this.access_token=datas;
+      
+
+      console.log(this.access_token);
+    });
+		/*this.base.shared.Lstorage.fetchData('isLogged').then(datas => {
         if(datas && (datas === 1)) {
           //this.navCtrl.navigateRoot('/home');
         }else{
           this.base.shared.Lstorage.delData('isLogged');
           this.base.shared.Lstorage.delData('uerId');
         }
-    });
+    });*/
   }
 
   register() {
