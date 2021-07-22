@@ -113,7 +113,14 @@
       "cordova-plugin-androidx-adapter": {},
       "cordova-plugin-facebook-connect": {
         "APP_ID": "344375677029837",
-        "APP_NAME": "GrubBuddies"
+        "APP_NAME": "GrubBuddies",
+        "FACEBOOK_URL_SCHEME_SUFFIX": " ",
+        "FACEBOOK_AUTO_LOG_APP_EVENTS": "true",
+        "FACEBOOK_HYBRID_APP_EVENTS": "false",
+        "FACEBOOK_ADVERTISER_ID_COLLECTION": "true",
+        "FACEBOOK_ANDROID_SDK_VERSION": "9.1.1",
+        "FACEBOOK_IOS_SDK_VERSION": "9.2.0",
+        "FACEBOOK_BROWSER_SDK_VERSION": "v9.0"
       }
     },
     "platforms": [
