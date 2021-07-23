@@ -9,7 +9,7 @@ export class ApiService extends BaseApiService {
   public registerUrl = con.API_URL + 'signup';
   public loginUrl = con.API_URL + 'login';
   public fpwdUrl = con.API_URL + 'fpassword';
-  public myProfileUrl = con.API_URL + 'myprofile';
+  public myProfileUrl = con.API_URL + 'my_profile';
   public editProfileUrl = con.API_URL + 'edit_profile';
   public setPrefrenceUrl = con.API_URL + 'set_prefrence';
   public cpwdUrl = con.API_URL + 'change_password';

@@ -117,7 +117,7 @@ export class AppComponent extends BaseComponent {
       if(!this.access_token){
         this.router.navigateByUrl('login') ;
       }else{
-        this.router.navigateByUrl('pizza-list') ;
+        this.router.navigateByUrl('home') ;
       }
 
       console.log(this.access_token);

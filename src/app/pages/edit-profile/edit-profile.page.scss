@@ -1,0 +1,57 @@
+.form-group{
+    position: relative;
+    margin-bottom: 10px;
+}
+.form-control{
+    border: 1px solid #E9E9E9;
+    border-radius: 9px;
+    height: 52px;
+    color: #535353;
+    background-color: #fff;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.25);
+    padding: 5px 10px !important;
+    padding-left: 44px !important;
+}
+.form-icon{
+    position: absolute;
+    top: 15px;
+    left: 14px;
+    z-index: 2;
+    font-size: 22px;
+}
+.btn-icon{
+    font-size: 26px;
+    margin-left: 72%;
+}
+.login-btn{
+    height: 52px;
+}
+.avatar{
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px #777777;
+    border: 5px solid #fff;
+    width: 106px;
+    height: 106px;
+    position: relative;
+    overflow: hidden;
+    .upload-btn{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background: rgba(0,0,0,0.75);
+        color: #fff;
+        font-size: 20px;
+        padding: 4px 0;
+        display: block;
+    }
+}
+.label{
+    margin-bottom: 6px;
+    color: #333333;
+    /* font-weight: bold; */
+    display: inline-block;
+}
