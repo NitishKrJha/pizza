@@ -1,12 +1,13 @@
-<ion-toolbar color="giftapp">
-  <ion-buttons slot="start" *ngIf="text !== 'home' && text !== 'login' && text !== 'otp_verify'">
-    <ion-back-button></ion-back-button>
-  </ion-buttons>
-  <ion-title>
-      <ion-text color="light">
-        <ion-text color="light" class="fw700">
-          <img class="parallax-obj parallax-down-obj" [ngClass]="(text !== 'home' && text !== 'login' && text !== 'otp_verify') ? 'headImage1' : 'headImage2'" src="{{iconUrl}}">
-        </ion-text>
-      </ion-text>
-  </ion-title>
-</ion-toolbar>
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>{{ headerName }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button (click)="logout()" >
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>

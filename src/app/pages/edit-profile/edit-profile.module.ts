@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { EditProfilePageRoutingModule } from './edit-profile-routing.module';
+import { SharedModule } from '../../_shared/shared.module';
 
 import { EditProfilePage } from './edit-profile.page';
 
@@ -13,7 +14,8 @@ import { EditProfilePage } from './edit-profile.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    EditProfilePageRoutingModule
+    EditProfilePageRoutingModule,
+    SharedModule
   ],
   declarations: [EditProfilePage]
 })

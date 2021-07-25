@@ -29,6 +29,7 @@ import { BaseService } from './_shared/_services/base.service';
 import { ApiService } from './_shared/_services/api.service';
 import { DatasharingService } from './_shared/_services/datasharing.service';
 import { Shared } from './_shared/_classes/share.class';
+import { SharedModule } from './_shared/shared.module';
 
 import { RouterStorageService } from './_shared/_services/router-storage.service';
 
@@ -48,6 +49,7 @@ import { RouterStorageService } from './_shared/_services/router-storage.service
     HttpClientModule,
     FormsModule,
     CommonModule,
+    SharedModule,
   ],
   providers: [
     StatusBar,

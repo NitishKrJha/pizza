@@ -1,39 +1,41 @@
-<ion-header>
-  <ion-toolbar color="danger">
-    <ion-title>My Account</ion-title>
-  </ion-toolbar>
-</ion-header>
-
+<headers myText="Edit Profile"></headers>
 <ion-content>
   <ion-grid>
     <ion-row>
       <ion-col size="12">
-        <ion-avatar class="avatar">
+        <!-- <ion-avatar class="avatar">
           <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
           <a href="#" class="upload-btn">
             <ion-icon name="camera"></ion-icon>
           </a>
-        </ion-avatar>
+        </ion-avatar> -->
         <div class="form-group">
-          <ion-label class="label">Full Name</ion-label>
-          <ion-input class="form-control" placeholder="John.doe@gmail.com" type="email"></ion-input>
+          <ion-label class="label">First Name</ion-label>
+          <ion-input class="form-control" type="text" [(ngModel)]="fname"></ion-input>
         </div>
       </ion-col>
       <ion-col size="12">
         <div class="form-group">
-          <ion-label class="label">Phone Number</ion-label>
-          <ion-input class="form-control" placeholder="9876543210" type="tel"></ion-input>
+          <ion-label class="label">Last Name</ion-label>
+          <ion-input class="form-control" type="text" [(ngModel)]="lname"></ion-input>
         </div>
       </ion-col>  
       <ion-col size="12">
         <div class="form-group">
-          <ion-label class="label">Address</ion-label>
-          <ion-input class="form-control" placeholder="Floor 3, XYZ Building" type="text"></ion-input>
+          <ion-label class="label">Phone Number</ion-label>
+          <ion-input class="form-control" type="number" [(ngModel)]="phone"></ion-input>
+        </div>
+      </ion-col>  
+      <ion-col size="12">
+        <div class="form-group">
+          <ion-label class="label">Eamil</ion-label>
+          <ion-input class="form-control" type="email" [(ngModel)]="email"></ion-input>
         </div>
       </ion-col>  
       <ion-col size="12" class="ion-text-center">
-        <ion-button color="danger" class="login-btn" expand="block" mode="ios">Save</ion-button>
+        <ion-button color="danger" class="login-btn" expand="block" mode="ios" (click)="editProfile()">Save</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>
+<footers></footers>

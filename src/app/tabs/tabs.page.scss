@@ -1,3 +1,101 @@
-.tab-selected{
-    color: #1094D9;
-}
+// .tab-style{
+//     background-image: url('../../assets/images/menu-bottom.png');
+//     background-repeat: no-repeat;
+//     background-size: cover;
+// }
+// ion-tab-bar{
+//     box-shadow: none;
+//     border: none;
+//     padding: 0;
+// }
+// .tab-icon{
+//    background: transparent;
+//    padding: 0;
+// }
+// .tab-selected{
+//     color: #D20000;
+// }
+// ion-tab-bar{
+//     box-shadow: 0 10px 15px #484848;
+// }
+// .home-icon{
+//     color: #D20000;
+// }
+// .tab-selected{
+//     img{
+//         width: 100px;
+//     }
+// }
+
+
+
+  .tabbar {
+    justify-content: center;
+  }
+  
+  .tab-button {
+    max-width: 200px;
+  }
+  
+  ::ng-deep ion-icon.icon-button {
+    background: #fff!important;
+    color: var(--ion-color-danger-tint);
+    padding: 15px;
+    border-radius: 50%!important;
+    box-shadow: 0 0 10px #dadada;
+  }
+  
+  :host ::ng-deep .tabs-inner {
+    position: unset!important;
+    contain: size style!important;
+  }
+  
+  .bottom-tab-bar {
+    --background: transparent;
+    --border: 0;
+  }
+  
+  ion-tab-button {
+    --background: #fff;
+    color: #808080;
+  }
+  
+  .button-center {
+    --background: transparent!important;
+    ion-icon {
+      height: 60px;
+      width: 60px;
+      font-size: 75px;
+    }
+  }
+  
+  ion-tab-bar {
+    &:before {
+      box-shadow: 0 387px 0 300px #fff;
+      position: absolute;
+      margin-top: -48px;
+      padding: 56px;
+      border-radius: 65%;
+      content: '';
+    }
+  }
+  
+  .inner-left-btn {
+    border-radius: 0 39% 0 0; // create the curved style on the left side of the center
+  }
+  
+  .inner-right-btn {
+    border-radius: 39% 0 0 0; // create the curved style on the right side of the center
+  }
+  
+  .inner-center-btn {
+    position: absolute;
+    left: calc(50% - 35px); // position your button in the center
+    bottom: 5px; // position your button slightly above the half bezel
+    font-size: 40px;
+    --background: transparent;
+  }
+
+  .tab-selected{
+    color: #D20000;
+  }

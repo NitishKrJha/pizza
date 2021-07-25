@@ -28,7 +28,7 @@ export class FootersComponent extends BaseComponent {
   }
 
   goProfile() {
-    this.router.navigate(['/myprofile']);
+    this.router.navigate(['/profile']);
   }
 
   goHome() {
