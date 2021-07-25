@@ -35,6 +35,12 @@ export class FootersComponent extends BaseComponent {
     this.router.navigate(['/home']);
   }
 
+  itemList() {
+    this.router.navigate(['/pizza-list']);
+  }
+
+ 
+
   logout() {
     this.loading.present();
     this.base.shared.Lstorage.fetchData('token').then(data => {
