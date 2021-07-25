@@ -72,7 +72,7 @@ export class LoginPage extends BaseComponent implements OnInit  {
       console.log(data.result.user);
       this.base.shared.Lstorage.setData('access_token',data.result.user.access_token);
       this.base.shared.Lstorage.setData('uerId',data.result.user.user_id);
-      this.navCtrl.navigateRoot('pizza-list');
+      this.navCtrl.navigateRoot('home');
 		  /*console.log(data.result);
       const successMessage = data.result && data.result.message ? data.result.message : 'something went wrong';
       this.base.shared.Lstorage.setData('isLogged', 1);
