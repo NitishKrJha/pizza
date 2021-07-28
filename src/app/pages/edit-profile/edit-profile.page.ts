@@ -22,6 +22,8 @@ export class EditProfilePage extends BaseComponent implements OnInit{
   email:any = '';
   phone:any = '';
   user_id: any;
+  imagePrefix: any = 'data:image/jpeg;base64,';
+  Image:any;
   constructor(  public navCtrl: NavController,
     public loadingCtrl: LoadingController,
     public alertCtrl: AlertController,
@@ -124,6 +126,7 @@ export class EditProfilePage extends BaseComponent implements OnInit{
       sourceType: 1
     };
     this.camera.getPicture(options).then((imageData) => {
+      this.Image=imageData;
       console.log('imageData',imageData);
       
     }, (err) => {
@@ -143,10 +146,16 @@ export class EditProfilePage extends BaseComponent implements OnInit{
       sourceType: 0
     };
     this.camera.getPicture(options).then((imageData) => {
+      this.Image=imageData;
      console.log('imageData',imageData);
     }, (err) => {
       this.base.shared.Alert.show_alert('Failed!',err);
     });
+  }
+
+
+  removeImg(fieldName: string) {
+    this.Image = '';
   }
 
 }
