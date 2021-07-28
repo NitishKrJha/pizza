@@ -8,7 +8,6 @@ import { EditProfilePageRoutingModule } from './edit-profile-routing.module';
 import { SharedModule } from '../../_shared/shared.module';
 
 import { EditProfilePage } from './edit-profile.page';
-
 @NgModule({
   imports: [
     CommonModule,

@@ -3,12 +3,12 @@
   <ion-grid>
     <ion-row>
       <ion-col size="12">
-        <!-- <ion-avatar class="avatar">
+         <ion-avatar class="avatar">
           <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-          <a href="#" class="upload-btn">
-            <ion-icon name="camera"></ion-icon>
-          </a>
-        </ion-avatar> -->
+           
+        </ion-avatar>
+        <ion-icon name="camera" (click)="openCamera()" style="margin-left: 194px; margin-top: -23px;font-size: 27px;"></ion-icon>
+      <!-- <ion-icon name="galary" (click)="openFileFromDevice()"></ion-icon> -->
         <div class="form-group">
           <ion-label class="label">First Name</ion-label>
           <ion-input class="form-control" type="text" [(ngModel)]="fname"></ion-input>

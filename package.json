@@ -20,12 +20,14 @@
     "@angular/platform-browser": "~12.0.1",
     "@angular/platform-browser-dynamic": "~12.0.1",
     "@angular/router": "~12.0.1",
-    "@ionic-native/camera": "^5.33.1",
+    "@capacitor/core": "3.1.2",
+    "@ionic-native/camera": "^5.34.0",
     "@ionic-native/core": "^5.33.1",
     "@ionic-native/device": "^5.33.1",
     "@ionic-native/facebook": "^5.33.1",
     "@ionic-native/file": "^5.33.1",
     "@ionic-native/file-path": "^5.33.1",
+    "@ionic-native/file-transfer": "^5.34.0",
     "@ionic-native/google-plus": "^5.33.1",
     "@ionic-native/ionic-webview": "^5.33.1",
     "@ionic-native/market": "^5.33.1",
@@ -36,6 +38,7 @@
     "@ionic/storage": "2.2.0",
     "cordova-android": "9.1.0",
     "cordova-plugin-device": "^2.0.3",
+    "cordova-plugin-file-transfer": "^1.7.1",
     "cordova-plugin-market": "^1.2.0",
     "cordova-plugin-network-information": "^3.0.0",
     "cordova-plugin-splashscreen": "^6.0.0",
@@ -55,6 +58,7 @@
     "@angular/compiler": "~12.0.1",
     "@angular/compiler-cli": "~12.0.1",
     "@angular/language-service": "~12.0.1",
+    "@capacitor/cli": "3.1.2",
     "@ionic/angular-toolkit": "^4.0.0",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
@@ -91,9 +95,7 @@
   "description": "An Ionic project",
   "cordova": {
     "plugins": {
-      "cordova-plugin-camera": {
-        "ANDROID_SUPPORT_V4_VERSION": "27.+"
-      },
+      "cordova-plugin-camera": {},
       "cordova-plugin-ionic-webview": {
         "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
       },
@@ -121,7 +123,8 @@
         "FACEBOOK_ANDROID_SDK_VERSION": "9.1.1",
         "FACEBOOK_IOS_SDK_VERSION": "9.2.0",
         "FACEBOOK_BROWSER_SDK_VERSION": "v9.0"
-      }
+      },
+      "cordova-plugin-file-transfer": {}
     },
     "platforms": [
       "android"

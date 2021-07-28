@@ -6,7 +6,7 @@ import { BaseComponent } from '../../_shared/_classes/base.component';
 //import * as con from '../../_shared/constant';
 import { LoadingService } from '../../_shared/loading.service';
 import * as con from '../../_shared/constant';
-
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 @Component({
   selector: 'app-edit-profile',
   templateUrl: './edit-profile.page.html',
@@ -31,6 +31,7 @@ export class EditProfilePage extends BaseComponent implements OnInit{
     public toastCtrl: ToastController,
     private route: ActivatedRoute,
     public loading: LoadingService,
+    private camera: Camera,
     injector: Injector) {
       super(injector);
       this.initBaseComponent();
@@ -108,6 +109,44 @@ export class EditProfilePage extends BaseComponent implements OnInit{
       this.loading.present();
       this.base.api.editprofile({id: this.user_id,email: this.email, phone: this.phone, fname:this.fname, lname:this.lname});
     }
+  }
+
+  openCamera() {
+    let self = this;
+    let options: CameraOptions = {
+      quality: 40,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      correctOrientation: true,
+      targetHeight: 400,
+      targetWidth: 400,
+      allowEdit: false,
+      saveToPhotoAlbum: false,
+      sourceType: 1
+    };
+    this.camera.getPicture(options).then((imageData) => {
+      console.log('imageData',imageData);
+      
+    }, (err) => {
+      this.base.shared.Alert.show_alert('Failed!',err);
+    });
+  }
+
+  openFileFromDevice() {
+    let self = this;
+    let options: CameraOptions = {
+      quality: 40,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      targetHeight: 400,
+      targetWidth: 400,
+      allowEdit: false,
+      saveToPhotoAlbum: false,
+      sourceType: 0
+    };
+    this.camera.getPicture(options).then((imageData) => {
+     console.log('imageData',imageData);
+    }, (err) => {
+      this.base.shared.Alert.show_alert('Failed!',err);
+    });
   }
 
 }
