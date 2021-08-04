@@ -109,7 +109,13 @@ export class EditProfilePage extends BaseComponent implements OnInit{
       this.base.shared.Alert.show_alert('Failed!', 'Please Enter Mobile Number'); 
     }else {
       this.loading.present();
-      this.base.api.editprofile({id: this.user_id,email: this.email, phone: this.phone, fname:this.fname, lname:this.lname});
+      this.base.shared.Lstorage.fetchData('access_token').then(datas => {
+        this.access_token=datas;
+        if(!this.access_token){
+          this.router.navigateByUrl('login') ;
+        }
+      this.base.api.editprofile({access_token:this.access_token,id: this.user_id,email: this.email, phone: this.phone, fname:this.fname, lname:this.lname,'device_type':'android'});
+    });
     }
   }
 
