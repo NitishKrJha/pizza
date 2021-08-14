@@ -14,7 +14,8 @@ import * as con from '../../_shared/constant';
 })
 export class ProfilePage extends BaseComponent implements OnInit{
   access_token:any;
-  name:any;
+  fname:any;
+  lname:any;
   mobile:any;
   mail:any;
   constructor(  public navCtrl: NavController,
@@ -54,8 +55,10 @@ export class ProfilePage extends BaseComponent implements OnInit{
     
     this.loading.dismiss();
     if (data.resultType === con.myProfile) {
-      this.name=data.result.user.name;
-      this.mobile="";
+      console.log(data.result);
+      this.fname=data.result.user.fname;
+      this.lname=data.result.user.fname;
+      //this.mobile=data.resul.user.phone;
       this.mail=data.result.user.email;
       console.log(data.result.user);
      

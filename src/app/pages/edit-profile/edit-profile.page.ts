@@ -62,18 +62,20 @@ export class EditProfilePage extends BaseComponent implements OnInit{
     
     this.loading.dismiss();
     if (data.resultType === con.myProfile) {
-      this.fname=data.result.user.name;
-      this.lname='';
-      this.phone='';
+      this.fname=data.result.user.fname;
+      this.lname=data.result.user.lname;
+      this.phone=data.result.user.phone;
       this.email=data.result.user.email;
       this.mobile="";
       this.mail=data.result.user.email;
       this.user_id = data.result.user.user_id;
+      this.Image=data.result.user.image;
       console.log(data.result.user);
      
     }else if (data.resultType === con.editProfile){
-      this.base.shared.Lstorage.setData('email', data.result.data.email);
-      this.events.publish('userLogged', data.result.data);
+      this.base.shared.Alert.show_alert('Success!', 'Profile Edit Successfully!'); 
+      this.base.shared.Lstorage.setData('email', data.result.user.email);
+      this.events.publish('userLogged', data.result.user);
       this.router.navigate(['/profile']);
     }
   }
@@ -114,7 +116,7 @@ export class EditProfilePage extends BaseComponent implements OnInit{
         if(!this.access_token){
           this.router.navigateByUrl('login') ;
         }
-      this.base.api.editprofile({access_token:this.access_token,id: this.user_id,email: this.email, phone: this.phone, fname:this.fname, lname:this.lname,'device_type':'android'});
+      this.base.api.editprofile({access_token:this.access_token,id: this.user_id,email: this.email, phone: this.phone, fname:this.fname, lname:this.lname,image:this.Image,'device_type':'android'});
     });
     }
   }

@@ -102,7 +102,55 @@
 .img-fluid{
     max-width: 100%;
 }
-
+.pizza-card{
+    border-radius: 5px;
+    padding-top: 10px;
+    overflow: hidden;
+    position: relative;
+    &.bg-red{
+        background: #ff3c51;
+        .shop-btn{
+            background: #d63244;
+        }
+    }
+    &.bg-yellow{
+        background: #e35c25;
+        .shop-btn{
+            background: #bf4d1f;
+        }
+    }
+    .shop-btn{
+        color: #fff;
+        font-size: 15px;
+        width: 100%;
+        padding: 8px 15px;
+        display: block;
+    }
+}
+.pizza-text{
+    padding: 0 15px;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    h3{
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 5px 0;
+    }
+    h4{
+        color: #fff;
+        font-size: 16px;
+        margin: 0;
+    }
+}
+.pizza-img{
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: 14px;
+    right: 0;
+    overflow: hidden;
+}
 //Tab
 
 
