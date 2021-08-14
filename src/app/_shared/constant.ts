@@ -28,3 +28,4 @@ export const editProfile = 'editProfile';
 export const setPrefrence='setPrefrence';
 export const cPassword='cPassword';
 export const categoryList = 'categoryList';
+export const categoryBaseProduct = 'categoryBaseProduct';

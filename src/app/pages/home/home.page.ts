@@ -67,8 +67,11 @@ export class HomePage extends BaseComponent implements OnInit {
    // this.router.navigateByUrl('/login', { replaceUrl: true }) ;;
   }
 
-  goTo(){
-    
+  goTo(id,name){
+  //  console.log(id);
+    this.base.shared.Lstorage.setData('categoryId',id);
+    this.base.shared.Lstorage.setData('categoryName',name);
+    this.router.navigate(['/pizza-list']);
   }
 
 }

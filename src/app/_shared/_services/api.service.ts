@@ -14,7 +14,7 @@ export class ApiService extends BaseApiService {
   public setPrefrenceUrl = con.API_URL + 'set_prefrence';
   public cpwdUrl = con.API_URL + 'change_password';
   public categoryUrl = con.API_URL + 'get_categories';
-  
+  public categoryBaseProductUrl = con.API_URL + 'food_by_categories';
   public register(params: any = {}) {
     this.genericApiCall(this.registerUrl, con.register, params, con.requestPost, true);
   }
@@ -30,6 +30,11 @@ export class ApiService extends BaseApiService {
   public myprofile(params: any = {}) {
     this.genericApiCall(this.myProfileUrl, con.myProfile, params, con.requestPost, true);
   }
+
+  public categoryBaseProduct(params: any = {}) {
+    this.genericApiCall(this.categoryBaseProductUrl, con.categoryBaseProduct, params, con.requestPost, true);
+  }
+
 
   public editprofile(params: any = {}) {
     this.genericApiCall(this.editProfileUrl, con.editProfile, params, con.requestPost, true);

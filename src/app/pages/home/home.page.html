@@ -16,7 +16,7 @@
           <div class="pizza-img">
             <img src="{{item.image}}" alt="">
           </div>
-          <ion-router-link class="shop-btn" href="pizza-list">Shop Now <ion-icon name="arrow-forward"></ion-icon></ion-router-link>
+          <div class="shop-btn" (click)="goTo(item.id,item.name)">Shop Now <ion-icon name="arrow-forward"></ion-icon></div>
         </div>
       </ion-col>
     </ion-row>
